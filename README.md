@@ -19,16 +19,17 @@ Repositorio do framework de testes UkalicoBaseTest
 	
 # Estrutura do projeto
 
-- img 
-- src
-- src
-   - test
-      - core
-	     - core
-         - pages
-         - testes
-		 - utils
-  	  - suites
+```
+UkalicoBaseTest
+|_arq 
+|_img
+|_src
+   |_test
+      |_core
+      |   |_pages
+      |   |_testes
+      |   |_utils
+      |_suites
       - myapp.core
 	  - myapp.page
 	  - myapp.tests
@@ -41,22 +42,4 @@ target
    
 pom.xml
 READM.md   
-
-```
-project
-│   README.md
-│   file001.txt    
-│
-└───folder1
-│   │   file011.txt
-│   │   file012.txt
-│   │
-│   └───subfolder1
-│       │   file111.txt
-│       │   file112.txt
-│       │   ...
-│   
-└───folder2
-    │   file021.txt
-    │   file022.txt
 ```
