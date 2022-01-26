@@ -1,9 +1,11 @@
 # UkalikoBaseTest
+Repositorio do framework de testes UkalicoBaseTest  
 
 # Arquitetura framework UkBaseTest
 
 ![](img/arquitetura_C4.png)
 
+# Stack
 - Java 1.8
 - Selenium-java 4.1.0
 - Selenium-server-standalone 3.5.3
