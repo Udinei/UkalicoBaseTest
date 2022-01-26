@@ -24,22 +24,24 @@ UkalicoBaseTest
 |_arq 
 |_img
 |_src
-   |_test
-      |_core
-      |   |_pages
-      |   |_testes
-      |   |_utils
-      |_suites
-      - myapp.core
-	  - myapp.page
-	  - myapp.tests
-      - resources
-	      - driver
-		  - grid
-  
-target
-   - screanshot	 
-   
+|   |_test
+|      |_core
+|      |  |_core
+|      |  |_pages
+|      |  |_testes
+|      |  |_utils
+|      |_suites
+|      |_myapp
+|      |  |_core
+|      |	 |_pages
+|      |	 |_tests
+|      |_resources
+|	    |_driver
+|	    |_grid
+|  
+|_target
+|   |_screanshot	 
+|   
 pom.xml
 READM.md   
 ```
