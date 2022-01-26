@@ -33,8 +33,8 @@ UkalicoBaseTest
 |      |_suites
 |      |_myapp
 |      |  |_core
-|      |	 |_pages
-|      |	 |_tests
+|      |     |_pages
+|      |     |_tests
 |      |_resources
 |	    |_driver
 |	    |_grid
@@ -43,5 +43,5 @@ UkalicoBaseTest
 |   |_screanshot	 
 |   
 pom.xml
-READM.md   
+README.md   
 ```
