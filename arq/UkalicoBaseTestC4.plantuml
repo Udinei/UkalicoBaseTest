@@ -1,0 +1,44 @@
+@startuml
+/'
+Author: Udinei Silva
+This file defines the architecture of the uKalicoBaseTest framework. 
+To graphically visualize the architecture, copy and paste the code from this file on the website: http://www.plantuml.com/plantuml/uml/
+'/
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+!define ICONURL https://raw.githubusercontent.com/tupadr3/plantuml-icon-font-sprites/v2.4.0
+!includeurl ICONURL/devicons/go.puml
+
+AddRelTag("async", $lineStyle = DashedLine())
+
+
+SHOW_PERSON_PORTRAIT()
+
+Person(analista,"Analista","Analisa caso de testes")
+Person(desenvolvedor,"Desenvolvedor","Desenvolve caso de testes")
+
+System_Ext(ide,"Intellij","Executa e Mantém caso de testes Java/Junit/Maven")
+
+System_Ext(myapp,"MyApp","Executa Funcionalidade/Validação", "teste")
+System_Ext(browser,"Browser","Carrega App e Input/Output dados")
+
+ContainerDb(bd,"Banco de dados","BD","Armazena dados")
+
+System_Boundary(framework, "FrameWork UkBaseTest"){
+
+
+Container(selenium,"Selenium","Selenium WebDriver","Controla o Browser em Paralelo/Grid")
+ContainerQueue(screenshot,"Disco","HD","Salva screenshot dos testes")
+
+Rel(analista, ide,"Analisa Entrada/Saída","IDE")
+Rel(desenvolvedor, ide,"Codifica Entrada/Saída","IDE")
+Rel(ide, selenium, "Start teste")
+Rel(selenium, browser, "Entradas")
+Rel(selenium, ide, "Status teste")
+Rel(selenium, screenshot, "img",$tags = "async", jpg)
+Rel(browser,myapp,"Entrada")
+Rel(browser,selenium,"Saida")
+Rel(myapp,browser,"Saida")
+Rel(myapp,bd,"Entradas")
+Rel(bd,myapp,"Saidas")
+}
+@enduml
