@@ -29,9 +29,9 @@ Repositorio do framework de testes UkalicoBaseTest
          - testes
 		 - utils
   	  - suites
-      - tasy.core
-	  - tasy.page
-	  - tasy.tests
+      - myapp.core
+	  - myapp.page
+	  - myapp.tests
       - resources
 	      - driver
 		  - grid
@@ -41,3 +41,22 @@ target
    
 pom.xml
 READM.md   
+
+```
+project
+│   README.md
+│   file001.txt    
+│
+└───folder1
+│   │   file011.txt
+│   │   file012.txt
+│   │
+│   └───subfolder1
+│       │   file111.txt
+│       │   file112.txt
+│       │   ...
+│   
+└───folder2
+    │   file021.txt
+    │   file022.txt
+```
