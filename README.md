@@ -1,5 +1,7 @@
 # UkalikoBaseTest
-Repositorio do framework de testes UkalicoBaseTest. Sendo o Framework a abstração que serve de estrutura para o projeto visando reuso e padronização, vantagens nativas:
+Repositorio do framework de testes UkalicoBaseTest. Sendo o Framework a abstração que serve de estrutura para o projeto visando reuso e padronização, focado na solução dos 3 maiores motivos de problemas nos testes funcionais: Localização de elementos, Sincronismo dos scripts e Massa de dados.
+
+### O framework possui as seguintes vantagens nativas:
 - Driver centralizado
 - Herança de compotamentos
 - Reuso do browser
@@ -7,8 +9,6 @@ Repositorio do framework de testes UkalicoBaseTest. Sendo o Framework a abstraç
 - Chaveamento para outros browsers
 - PADRONIZAÇÃO de projeto de longo prazo
 
-Focado na solução para os 3 maiores motivos de problemas nos testes funcionais:
-Localização de elementos, Sincronismo dos scripts e Massa de dados.
   
 
 # Arquitetura framework UkBaseTest
