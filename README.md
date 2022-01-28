@@ -10,6 +10,7 @@ Repositorio do framework de testes UkalicoBaseTest. Sendo o Framework a abstraç
 - PADRONIZAÇÃO de projeto de longo prazo
 - DSL herdada nos testes
 - Organização dos testes com PageObject
+- Execução em paralelo (Threads)
 - Execução em GRID
 - Execução na Nuvem
 
