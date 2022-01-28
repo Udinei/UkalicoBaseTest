@@ -62,7 +62,7 @@ UkalicoBaseTest
 ```
 
 # Referências
-*[Curso de Testes funcionais com Selenium WebDriver: Do básico ao GRID : Por Francisco Wagner Costa Aquino](https://www.udemy.com/course/testes-funcionais-com-selenium-webdriver/)
-*[Selenium automates browsers](https://www.selenium.dev/)
-*[DSL - Linguagens específicas de domínio](https://www.jetbrains.com/pt-br/mps/concepts/domain-specific-languages/)
-*[XPath, CSS, DOM and Selenium: The Rosetta Stone](https://www.red-gate.com/simple-talk/development/dotnet-development/xpath-css-dom-and-selenium-the-rosetta-stone/)
+* [Curso de Testes funcionais com Selenium WebDriver: Do básico ao GRID : Por Francisco Wagner Costa Aquino](https://www.udemy.com/course/testes-funcionais-com-selenium-webdriver/)
+* [Selenium automates browsers](https://www.selenium.dev/)
+* [DSL - Linguagens específicas de domínio](https://www.jetbrains.com/pt-br/mps/concepts/domain-specific-languages/)
+* [XPath, CSS, DOM and Selenium: The Rosetta Stone](https://www.red-gate.com/simple-talk/development/dotnet-development/xpath-css-dom-and-selenium-the-rosetta-stone/)
