@@ -8,7 +8,7 @@ Repositorio do framework de testes UkalicoBaseTest. Sendo o Framework a abstraç
 - Scheenshot ao final dos testes
 - Chaveamento para outros browsers
 - PADRONIZAÇÃO de projeto de longo prazo
-- Organização dos testes com PageObject
+- Organização dos artefatos de testes
 - Execução em paralelo (Threads)
 - Execução em GRID
 - Execução na Nuvem
