@@ -16,29 +16,41 @@ SHOW_PERSON_PORTRAIT()
 Person(analista,"Analista","Analisa caso de testes")
 Person(desenvolvedor,"Desenvolvedor","Desenvolve caso de testes")
 
-System_Ext(ide,"Intellij","Executa e Mantém caso de testes Java/Junit/Maven")
+System_Ext(ide,"Intellij","Mantém Analisa Entrada/Saída/Executa/Verificação")
 
 System_Ext(myapp,"MyApp","Executa Funcionalidade/Validação", "teste")
 System_Ext(browser,"Browser","Carrega App e Input/Output dados")
 
-ContainerDb(bd,"Banco de dados","BD","Armazena dados")
+ContainerDb(bd,"Banco de dados","BD","Armazena dados/Executa regras negocios")
 
 System_Boundary(framework, "FrameWork UkBaseTest"){
 
 
-Container(selenium,"Selenium","Selenium WebDriver","Controla o Browser em Paralelo/Grid")
+Container(webdriver,"WebDriver","Selenium WebDriver","Controla o Browser")
+Container(grid,"Grid","Selenium Grid","Testes em Grid")
 ContainerQueue(screenshot,"Disco","HD","Salva screenshot dos testes")
+Container(core,"Core","Framework UkbaseTeste/Java","Controla e executa os testes")
+Container(projeto_teste,"Projeto Teste","Projeto de testes Myapp","Implementa os testes do sistema/Java/Junit/Maven")
+Container(surefire,"Surefire","maven-surefire-plugin","Executa os testes em paralelo")
 
-Rel(analista, ide,"Analisa Entrada/Saída","IDE")
-Rel(desenvolvedor, ide,"Codifica Entrada/Saída","IDE")
-Rel(ide, selenium, "Start teste")
-Rel(selenium, browser, "Entradas")
-Rel(selenium, ide, "Status teste")
-Rel(selenium, screenshot, "img",$tags = "async", jpg)
-Rel(browser,myapp,"Entrada")
-Rel(browser,selenium,"Saida")
-Rel(myapp,browser,"Saida")
-Rel(myapp,bd,"Entradas")
-Rel(bd,myapp,"Saidas")
+
+
+Rel(analista, ide,"Codifica","IDE")
+Rel(desenvolvedor, ide,"Codifica","IDE")
+Rel(webdriver, browser, " ")
+Rel(ide, projeto_teste,"mantém")
+Rel(ide, framework,"executa")
+Rel(core, screenshot, "img",$tags = "async", jpg)
+Rel(browser,myapp," ")
+Rel(browser,webdriver," ")
+Rel(myapp,browser," ")
+Rel(myapp,bd,"Input")
+Rel(bd,myapp,"Output")
+Rel(core,webdriver,"input")
+Rel(webdriver,core,"output ")
+Rel(core,projeto_teste,"executa")
+Rel(core,grid,"executa")
+Rel(framework,ide,"Status do teste Falha/Sucesso")
+Rel(core, surefire,"executa")
 }
 @enduml
