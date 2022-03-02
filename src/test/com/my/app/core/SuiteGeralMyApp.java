@@ -1,17 +1,16 @@
-package br.com.ukalico.suites;
-
-import com.my.app.pages.LoginPageMyApp;
-import com.my.app.tests.TestCoreMyApp;
+package com.my.app.core;
 
 import org.junit.BeforeClass;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
+import com.my.app.pages.LoginPageMyApp;
+
 @RunWith(Suite.class)
 @SuiteClasses({
 	     // Inserir classes da suite de testes do MyApp aqui
-		TestCoreMyApp.class
+		//TestCoreMyApp.class
 
 })
 public class SuiteGeralMyApp {
@@ -20,11 +19,11 @@ public class SuiteGeralMyApp {
 
 
 	
-	/** Usar metodo reset() para resetar BD via aplicação ou script SQL*/
+	/** Usar metodo resetDB() para resetar BD via aplicação ou script SQL*/
 	@BeforeClass
-	public static void reset() {
+	public static void resetDB() {
 
-		//page.resetar();
+		//loginPage.resetar();
 
 		// fecha janela do browser apos executar os testes
 		//DriverFactory.killDriver();

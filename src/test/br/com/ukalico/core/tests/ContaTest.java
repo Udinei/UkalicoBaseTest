@@ -8,17 +8,14 @@ import org.junit.Test;
 
 
 public class ContaTest extends BaseTestCore {
-	
-	@Test
-	public void test() {
 		
-	}
-	
 	MenuPage menuPage = new MenuPage();
 	ContasPage contasPage = new ContasPage();
 	
+	
+	 
 	@Test
-	public void test1_InserirConta() throws InterruptedException{
+	public void DevePermitirCadastrarUmaConta() throws InterruptedException{
 		menuPage.acessarTelaInserirConta();
 		
 		contasPage.setNome("Conta do Teste");
@@ -28,8 +25,10 @@ public class ContaTest extends BaseTestCore {
 		Assert.assertEquals("Conta adicionada com sucesso!", contasPage.obterMensagemSucesso());
 	}
 	
+	
+	
 	@Test
-	public void test2_AlterarConta(){
+	public void DevePermitirAlterarConta(){
 		menuPage.acessarTelaListarConta();
 		
 		contasPage.clicarAlterarConta("Conta para alterar");
@@ -40,8 +39,10 @@ public class ContaTest extends BaseTestCore {
 		Assert.assertEquals("Conta alterada com sucesso!", contasPage.obterMensagemSucesso());
 	}
 	
+	
+	
 	@Test
-	public void test3_InserirContaMesmoNome(){
+	public void NaoDevePermitirCadastrarDuasContaComMesmoNome(){
 		menuPage.acessarTelaInserirConta();
 		
 		contasPage.setNome("Conta mesmo nome");

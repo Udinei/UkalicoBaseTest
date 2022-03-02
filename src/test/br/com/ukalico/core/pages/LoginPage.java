@@ -5,7 +5,7 @@ import br.com.ukalico.core.core.DriverFactory;
 
 public class LoginPage extends BasePage {
 	
-	public void acessarTelaInicial(String url){
+	public void acessarHomePage(String url){
 		DriverFactory.getDriver().get(url);
 	}
 	

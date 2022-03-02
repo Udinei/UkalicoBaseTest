@@ -23,10 +23,10 @@ public class SuiteGeralCore {
 
 	/** reseta o BD via aplicação assim que iniciar a aplicação */
 	@BeforeClass
-	public static void reset() {
+	public static void resetBD() {
 		// o script sql de reset do BD ser invocado nesse ponto tb
 		
-		page.acessarTelaInicial("https://seubarriga.wcaquino.me");
+		page.acessarHomePage("https://seubarriga.wcaquino.me");
 		
 		page.setEmail("udineisilva@gmail.com");
 		page.setSenha("123456");

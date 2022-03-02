@@ -1,21 +1,38 @@
 package br.com.ukalico.core.core;
 
-import org.openqa.selenium.*;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import static br.com.ukalico.core.core.DriverFactory.getDriver;
 
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
-import static br.com.ukalico.core.core.DriverFactory.getDriver;
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.TimeoutException;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
+/**
+ *@author Udinei
+ *<p>Classe dos metodos basicos de acesso a elementos de tela por Id, xpath ou ccs  
+ */
 public class BasePage {
 
-	public WebDriverWait wait = new WebDriverWait(getDriver(), 20);
-
+    /** Controla o tempo de sincronismo de exibição dos elementos da app com Selenium,
+     *  pode ser usado de forma individual com duração do tempo de espera, definida 
+     *  somente para o elemento na tela que esta sendo acessado. 
+     *  <p>A duração do tempo setado aqui sera usado para toda a aplicação
+     *  
+     */ 
+	public WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(0));
+   
+	
 /********* TextField e TextArea ************/
 	
 	public void escrever(By by, String texto) {
@@ -146,8 +163,7 @@ public class BasePage {
    public void clicarBotaoInput(String type, String value) {
 	   getDriver().findElement(By.xpath(".//input[@type='"+type+"'][@value='"+value+"']")).click();
    }
-
-	//   //button[@ng-if='ok_'][@type='button']
+   	
 
 	/********* Textos ************/
 	

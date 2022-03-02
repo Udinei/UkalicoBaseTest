@@ -14,7 +14,7 @@ public class MyAppCadastroPessoaTest extends BaseTestCoreMyApp {
 
     @Test
     public void inserirPessoa() {
-        menuPageMyApp.acessarTelaInicial();
+        menuPageMyApp.acessarHomePage("url");
         cadCompletoPessoas.pesquisarFuncao();
         cadCompletoPessoas.clickNomeDaFuncao();
         cadCompletoPessoas.clicarBotaoAdicionar();

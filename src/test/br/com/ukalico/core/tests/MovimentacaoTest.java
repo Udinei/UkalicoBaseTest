@@ -12,7 +12,7 @@ import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.List;
 
-import static br.com.ukalico.core.utils.DataUtils.obterDataFormatada;
+import static br.com.ukalico.core.utils.UkUtils.obterDataFormatada;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class MovimentacaoTest extends BaseTestCore {
@@ -43,8 +43,8 @@ public class MovimentacaoTest extends BaseTestCore {
 		
 		movPage.salvar();
 		List<String> erros = movPage.obterErros();
-//		Assert.assertEquals("Data da Movimenta��o � obrigat�rio", erros.get(0));
-//		Assert.assertTrue(erros.contains("Data da Movimenta��o � obrigat�rio"));
+//		Assert.assertEquals("Data da Movimentação é obrigatória", erros.get(0));
+//		Assert.assertTrue(erros.contains("Data da Movimentacao é obrigatório"));
 		Assert.assertTrue(erros.containsAll(Arrays.asList(
 				"Data da Movimentação é obrigatório", "Data do pagamento é obrigatório",
 				"Descrição é obrigatório", "Interessado é obrigatório",

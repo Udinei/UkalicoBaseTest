@@ -17,10 +17,13 @@ public class ContasPage extends BasePage {
 		return obterTexto(By.xpath("//div[@class='alert alert-success']"));
 	}
 	
+	
 	public String obterMensagemErro(){
 		return obterTexto(By.xpath("//div[@class='alert alert-danger']"));
 	}
 
+	
+	/** clica no icone alterar da tabela de ações que podem ser executadas na conta */
 	public void clicarAlterarConta(String string) {
 		obterCelula("Conta", string, "Ações", "tabelaContas")
 			.findElement(By.xpath(".//span[@class='glyphicon glyphicon-edit']")).click();
