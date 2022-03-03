@@ -30,7 +30,9 @@ Repositorio do framework de testes UkalicoBaseTest. Sendo o Framework a abstraç
 - Apache Maven 3.8.3
 - PlantUML 
 	
-	
+
+
+
 # Estrutura do projeto
 
 ```
@@ -61,7 +63,32 @@ UkalicoBaseTest
 |.gitignore
 ```
 
+
+
+# Nota
+
+Após fazer um git clone do projeto, criar na pasta  src/test a pasta resources e dentro dela as pastas:   driver e grid:
+
+```
+UkalicoBaseTest
+|_src
+|   |_test
+|      |_resources
+|	    |_driver
+|	    |_grid
+|  
+```
+
+- Fazer o download do driver do Chrome, arquivo chromedriver.exe (Version ChromeDriver 97.0.4692.71 ) em https://chromedriver.chromium.org/downloads e adicionar na pasta driver.
+
+- Fazer o download do server do Selenium, arquivo selenium-server-standalone-3.5.3.jar em https://selenium-release.storage.googleapis.com/index.html?path=3.5/  e adicionar na pasta grid. 
+
+
+
+
+
 # Referências
+
 * [Testes funcionais com Selenium WebDriver: Do básico ao GRID : Por Francisco Wagner Costa Aquino](https://www.udemy.com/course/testes-funcionais-com-selenium-webdriver/)
 * [Selenium automates browsers](https://www.selenium.dev/)
 * [DSL - Linguagens específicas de domínio](https://www.jetbrains.com/pt-br/mps/concepts/domain-specific-languages/)
