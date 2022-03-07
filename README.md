@@ -30,7 +30,7 @@ Repositorio do framework de testes UkalicoBaseTest. Sendo o Framework a abstraç
 - Apache Maven 3.8.3
 - PlantUML 
 - Dbunit 2.5.4
-- Postgresql 42.2.2
+- Postgresql 10.20
 	
 
 
