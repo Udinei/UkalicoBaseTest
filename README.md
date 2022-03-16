@@ -49,9 +49,10 @@ UkalicoBaseTest
 |      |  |_testes
 |      |  |_utils
 |      |  |_dbunit
-|      |       |_utils
-|      |       |_massa
-|      |       |_tests      
+|      |  |     |_utils
+|      |  |     |_massa
+|      |  |     |_tests  
+|      |  |_generator          
 |      |_suites
 |      |_myapp
 |      |  |_core

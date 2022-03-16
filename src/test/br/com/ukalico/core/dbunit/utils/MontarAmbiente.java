@@ -45,14 +45,14 @@ public class MontarAmbiente {
 	}
 	
 	public static void criarAmbiente() throws ClassNotFoundException, SQLException {
-		//removerEstuturas();
+		removerEstuturas();
 		criarEstuturas();
 		 
 		System.out.println("Ambiente criado!");
 	}
 	
 	
-	// TODO Implementar metodo abaixo. Validação em plsql, onde caso o banco dbunit, não exista deve ser criado automaticamente 
+	// TODO Implementar metodo abaixo. Validação em plsql, onde caso o banco dbunit não exista deve ser criado automaticamente 
 	//public static void criarBancoDBunit() throws ClassNotFoundException, SQLException {
 	//	Connection conn = ConnectionFactory.getConnection();
 	//	conn.createStatement().execute("SELECT CREATE DATABASE dbunit WHERE NOT EXISTS (SELECT FROM pg_database WHERE datname = \"dbunit\")\"gexec\"");
